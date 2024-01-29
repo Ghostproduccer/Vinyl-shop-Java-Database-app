@@ -1,4 +1,4 @@
-# webVinyl Java Database Application
+# VinylShop Java Database Application
 
 ## Description
 The developed program is a Java application that interacts with a MySQL database and performs read and write operations on XML files. It is designed to manage data related to a vinyl store, providing functionalities through an interactive menu.
