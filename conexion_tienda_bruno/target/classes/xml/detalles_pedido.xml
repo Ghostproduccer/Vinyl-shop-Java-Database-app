@@ -1,0 +1,15 @@
+<detalles_pedido>
+    <detalle>
+        <id_pedido>1</id_pedido>
+        <id_vinilo>1</id_vinilo>
+        <cantidad>2</cantidad>
+        <precio_unitario>29.99</precio_unitario>
+    </detalle>
+    <detalle>
+        <id_pedido>2</id_pedido>
+        <id_vinilo>2</id_vinilo>
+        <cantidad>1</cantidad>
+        <precio_unitario>19.99</precio_unitario>
+    </detalle>
+    <!-- Agrega más detalles de pedido si es necesario -->
+</detalles_pedido>

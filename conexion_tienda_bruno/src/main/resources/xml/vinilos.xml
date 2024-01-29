@@ -1,0 +1,19 @@
+<vinilos>
+    <vinilo>
+        <nombre>Losdsfdfsementos</nombre>
+        <artista>The Rose Island</artista>
+        <genero>Techno</genero>
+        <ano_lanzamiento>2021</ano_lanzamiento>
+        <precio>12.00</precio>
+        <stock>50</stock>
+    </vinilo>
+    <vinilo>
+        <nombre>Fanfddfsrvice</nombre>
+        <artista>Not A Headliner</artista>
+        <genero>Techno</genero>
+        <ano_lanzamiento>2022</ano_lanzamiento>
+        <precio>15.00</precio>
+        <stock>20</stock>
+    </vinilo>
+    <!-- Agrega más vinilos si es necesario -->
+</vinilos>

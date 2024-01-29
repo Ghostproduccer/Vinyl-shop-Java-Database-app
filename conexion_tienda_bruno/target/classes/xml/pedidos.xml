@@ -1,0 +1,13 @@
+<pedidos>
+    <pedido>
+        <id_user>1</id_user>
+        <fecha_pedido>2024-01-27</fecha_pedido>
+        <estado>Pendiente</estado>
+    </pedido>
+    <pedido>
+        <id_user>2</id_user>
+        <fecha_pedido>2024-01-28</fecha_pedido>
+        <estado>En Proceso</estado>
+    </pedido>
+    <!-- Agrega más pedidos si es necesario -->
+</pedidos>
