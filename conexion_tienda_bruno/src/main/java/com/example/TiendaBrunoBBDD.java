@@ -16,7 +16,8 @@ import java.util.Scanner;
 
 import javax.xml.bind.annotation.XmlElement;
 
-import com.example.pojo.*;
+import com.example.model.*;
+import com.example.util.XMLConversion;
 
 public class TiendaBrunoBBDD {
 
