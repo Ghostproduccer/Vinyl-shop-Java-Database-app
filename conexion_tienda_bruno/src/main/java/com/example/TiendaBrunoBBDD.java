@@ -108,7 +108,7 @@ public class TiendaBrunoBBDD {
                             for (Map.Entry<Integer, Integer> entry : cantidadPorVinilo.entrySet()) {
                                 int idVinilo = entry.getKey();
                                 int cantidad = entry.getValue();
-                                // Obtener el precio unitario del vinilo (aquí debes reemplazar "obtenerPrecioVinilo()" por el método real)
+                                // Obtener el precio unitario del vinilo
                                 double precioUnitario = consultarVinilo(idVinilo).getPrecio();
     
                                 String sqlInsertDetalle = "INSERT INTO detalles_pedido (id_pedido, id_vinilo, cantidad, precio_unitario) VALUES ("

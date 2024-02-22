@@ -58,21 +58,21 @@ VALUES
     ('8am In Salford', 'Blasha & Allatt', 'Warehouse Rumbler', 2023, 23.50, 15),
     ('Dead Ashcid', 'Jacquarius', 'Techno', 2024, 16.25, 40);
 
--- Inserción de datos para la tabla 'users'
+-- Inserción de datos de ejemplo para la tabla 'users'
 INSERT INTO users (nombre, apellido, email, direccion, telefono, contrasena)
 VALUES 
     ('Bruno', 'Bruno', 'bruno@example.com', 'calle mayor', '666665748', 'password123'),
     ('Alice', 'Smith', 'alice.smith@example.com', '456 Oak St', '6684635253', 'secretword'),
     ('Bob', 'Johnson', 'bob.johnson@example.com', '789 Maple St', '698567453', 'letmein');
 
--- Inserción de datos para la tabla 'pedidos'
+-- Inserción de datos de ejemplo para la tabla 'pedidos'
 INSERT INTO pedidos (id_user, fecha_pedido, estado)
 VALUES 
     (1, '2024-01-27', 'En proceso'),
     (2, '2024-01-28', 'Enviado'),
     (3, '2024-01-29', 'Entregado');
 
--- Inserción de datos para la tabla 'detalles_pedido'
+-- Inserción de datos de ejemplo para la tabla 'detalles_pedido'
 INSERT INTO detalles_pedido (id_pedido, id_vinilo, cantidad, precio_unitario)
 VALUES 
     (1, 1, 2, 19.99),
