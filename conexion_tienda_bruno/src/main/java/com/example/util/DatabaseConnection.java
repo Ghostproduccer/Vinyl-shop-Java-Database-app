@@ -9,24 +9,21 @@ import java.util.Properties;
 
 public class DatabaseConnection {
 
-    private static Connection connection = null;
+    private static final String PROPERTIES_FILE = "com/example/util/db.properties";
 
-    public static Connection getConnection() {
-        if (connection != null)
-            return connection;
-        else {
-            try {
-                Properties prop = new Properties();
-                InputStream inputStream = DatabaseConnection.class.getClassLoader().getResourceAsStream("util/db.properties");
-                prop.load(inputStream);
-                String url = prop.getProperty("db.url");
-                String username = prop.getProperty("db.username");
-                String password = prop.getProperty("db.password");
-                connection = DriverManager.getConnection(url, username, password);
-            } catch (IOException | SQLException e) {
-                e.printStackTrace();
-            }
-            return connection;
+    public static Connection getConnection() throws SQLException {
+        Properties prop = new Properties();
+        try (InputStream inputStream = DatabaseConnection.class.getClassLoader().getResourceAsStream(PROPERTIES_FILE)) {
+            prop.load(inputStream);
+        } catch (IOException e) {
+            e.printStackTrace();
+            throw new SQLException("Error loading database properties");
         }
+
+        String url = prop.getProperty("db.url");
+        String username = prop.getProperty("db.username");
+        String password = prop.getProperty("db.password");
+
+        return DriverManager.getConnection(url, username, password);
     }
 }

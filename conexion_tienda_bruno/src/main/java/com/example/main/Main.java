@@ -4,13 +4,18 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-import com.example.TiendaBrunoBBDD;
+import com.example.dao.UserDAOImplementation;
+import com.example.dao.ViniloDAOImplementation;
+import com.example.main.TiendaBrunoBBDD;
 import com.example.model.*;
 import com.example.util.XMLConversion;
 
 public class Main {
 
     private static TiendaBrunoBBDD bbdd = new TiendaBrunoBBDD();
+    private static UserDAOImplementation userDAO = new UserDAOImplementation();
+    private static ViniloDAOImplementation viniloDAO = new ViniloDAOImplementation();
+    
     private static Scanner sc = new Scanner(System.in);
     private static final String XML_PATH = XMLConversion.getXmlPath();
 
@@ -44,7 +49,7 @@ public class Main {
                 default:
                     System.out.println("Opción no válida. Por favor, seleccione una opción válida.");
             }
-        } while (opcion != 5);
+        } while (opcion != 6);
     }
 
     private static void mostrarMenu() {
@@ -69,7 +74,7 @@ public class Main {
     }
 
     private static void realizarPedido() {
-        User cliente = bbdd.listarUsuarios().get(0);
+        User cliente = userDAO.getAllUsers().get(0);
         List<Vinilo> listaVinilos = new ArrayList<>();
         bbdd.consultarTabla("vinilos");
         sc.nextLine();
@@ -85,7 +90,7 @@ public class Main {
 
             try {
                 int idVinilo = Integer.parseInt(input);
-                Vinilo vinilo = bbdd.consultarVinilo(idVinilo);
+                Vinilo vinilo = viniloDAO.getViniloById(idVinilo);
 
                 if (vinilo != null) {
                     listaVinilos.add(vinilo);
@@ -108,7 +113,7 @@ public class Main {
     private static void modificarPrecioVinilo() {
         System.out.println("Introduzca el id del vinilo");
         Integer idVinilo = sc.nextInt();
-        Vinilo vinilo = bbdd.consultarVinilo(idVinilo);
+        Vinilo vinilo = viniloDAO.getViniloById(idVinilo);
         System.out.println(vinilo);
         sc.nextLine();
         System.out.println("¿Desea modificar el precio del vinilo? s/n");

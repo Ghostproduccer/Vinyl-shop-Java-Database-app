@@ -10,7 +10,7 @@ public interface PedidoDAO {
 
     Pedido getPedidoById(int id);
 
-    boolean insertPedido(Pedido pedido);
+    int insertPedido(Pedido pedido);
 
     boolean updatePedido(Pedido pedido);
 

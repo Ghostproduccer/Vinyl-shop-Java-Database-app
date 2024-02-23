@@ -13,7 +13,7 @@ public class ViniloDAOImplementation implements ViniloDAO {
     public List<Vinilo> getAllVinilos() {
         List<Vinilo> vinilos = new ArrayList<>();
         try (Connection con = DatabaseConnection.getConnection();
-             Statement statement = con.createStatement()) {
+            Statement statement = con.createStatement()) {
             String sql = "SELECT * FROM vinilos;";
             ResultSet rs = statement.executeQuery(sql);
             while (rs.next()) {
